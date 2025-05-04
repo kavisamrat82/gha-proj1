@@ -1,0 +1,11 @@
+name: firstghaction
+on: [push, workflow_dispatch]
+jobs:
+  firstjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: lint 
+        run: eslint --ext .jsx --fix src
+      - name: test
+        run: vitest run
+      
