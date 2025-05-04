@@ -4,6 +4,10 @@ jobs:
   firstjob:
     runs-on: ubuntu-latest
     steps:
+      - name: set up job 
+        run: echo "setting up job"
+      - name: install eslint
+        run: npm install -g eslint     
       - name: lint 
         run: eslint --ext .jsx --fix src
       - name: test
