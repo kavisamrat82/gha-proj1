@@ -7,7 +7,7 @@ jobs:
       - name: Get the code
         uses: actions/checkout@v3
       - name: intall dependencies
-        run: npn ci
+        run: npm ci
       - name: lint
         run: npm run lint
   test: 
@@ -16,6 +16,6 @@ jobs:
       - name: Get the code
         uses: actions/checkout@v3
       - name: intall dependencies
-        run: npn ci
+        run: npm ci
       - name: test
         run: npm run test
