@@ -4,14 +4,16 @@ jobs:
   firstjob:
     runs-on: ubuntu-latest
     steps:
-      - name: set up job 
-        run: echo "setting up job"
-      - name: install eslint
-        run: npm install -g eslint
-      - name: list directory contents
-        run: ls -la
+      - name: get Code
+        uses: actions/checkout@v3
+      - name: install Dependencies
+        run: npm ci
       - name: lint 
-        run: eslint --ext .jsx --fix ../../src
+        run: npm run lint
       - name: test
-        run: vitest run
+        run: npm test run
+      - name: build code
+        run: npm run build
+      - name: Deploy code
+        run: echo "Deploy the code"
       
