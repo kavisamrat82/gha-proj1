@@ -1,0 +1,12 @@
+name: deployment
+on: push
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Get the code
+        run: actions/checkout@v3
+      - name: intall dependencies
+        run: npn ci
+      - name: lint
+        run: npm run lint
