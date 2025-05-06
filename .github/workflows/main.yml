@@ -11,7 +11,7 @@ jobs:
       - name: list directory contents
         run: ls -la
       - name: lint 
-        run: eslint --ext .jsx --fix src
+        run: eslint --ext .jsx --fix ../../src
       - name: test
         run: vitest run
       
